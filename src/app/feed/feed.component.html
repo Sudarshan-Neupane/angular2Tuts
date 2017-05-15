@@ -1,0 +1,22 @@
+<div class="ui comments" *ngIf="tweets.length">
+<div class="ui comment" *ngFor="let tweet of tweets">
+  <a class="avatar">
+    <img src="/assets/avatars/{{tweet.image}}" alt="{{tweet.image}}" height="30px" width="30px">
+  </a>
+  <div class="content">
+    <a class="author">{{tweet.author}}</a>
+    <div class="metadata">
+      <span class="date">5 days ago</span>
+    </div>
+    <div class="text">
+      {{tweet.author}}
+    </div>
+    <div class="actions">
+      <a class="reply">Reply</a>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="!tweets.length">
+  No tweets found
+</div>
