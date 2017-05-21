@@ -26,6 +26,11 @@ tweets=[
     }
 
   }
+  onNewTweet(myText){
+    this.tweets.unshift(
+    {text:myText.value,author:"Sudarshan ",image:"sudarshan.jpeg","favorite":{"length":1},"retweets":["Sudarshan"]}
+    );
+  }
   ngOnInit() {
   }
 
