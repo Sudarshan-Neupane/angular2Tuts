@@ -2,7 +2,7 @@
 
   <div class="field">
     <label>What is on your mind?</label>
-    <textarea name="body" placeholder="Penny from your thought?" type="text" #myText></textarea>
+    <textarea name="body" placeholder="Penny from your thought?" type="text" [(ngModel)]="tweetText"></textarea>
   </div>
   <button class="ui button primary" type="button" (click)="onNewTweet(myText)">Tweet </button>
 </form>

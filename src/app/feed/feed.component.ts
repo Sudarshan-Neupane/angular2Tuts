@@ -12,6 +12,9 @@ tweets=[
   {text:"Another author  tweets",author:"Gleen ",image:"three.jpg","favorite":{"length":1},"retweets":["shyam"]},
 ]
   constructor() { }
+  //binding module
+  tweetText="";
+
   isUserInCollection(collection: string[],userId: string) : boolean{
     return collection.indexOf(userId)!=-1;
   }
@@ -26,10 +29,11 @@ tweets=[
     }
 
   }
-  onNewTweet(myText){
+  onNewTweet(){
     this.tweets.unshift(
-    {text:myText.value,author:"Sudarshan ",image:"sudarshan.jpeg","favorite":{"length":1},"retweets":["Sudarshan"]}
+    {text:this.tweetText,author:"Sudarshan ",image:"sudarshan.jpeg","favorite":{"length":1},"retweets":["Sudarshan"]}
     );
+    this.tweetText="";
   }
   ngOnInit() {
   }
