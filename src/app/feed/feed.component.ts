@@ -18,7 +18,6 @@ tweets=[
   onFavorite(tweet){
 
     tweet.favorite.length++;
-    // alert(tweet.favorite.length+1);
   }
   onRetweet(tweet){
     if(!this.isUserInCollection(tweet.retweets,"Glen")) {

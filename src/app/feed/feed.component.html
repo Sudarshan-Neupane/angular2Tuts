@@ -14,10 +14,10 @@
     <div class="actions">
       <a class="reply">Reply</a>
       <a class="like" (click)="onFavorite(tweet)">
-        <i class="like icon"></i>{{tweet.favorite.length}}
+        <i class="like icon"></i>{{tweet.favorite.length}} Favorite
       </a>
-      <a class="retweet" (click)="onRetweet(tweet)">
-        <i class="retweet icon"></i>{{tweet.retweets.length}}
+      <a class="retweet" (click)="onRetweet(tweet)" [ngClass]='{retweeted: isUserInCollection(tweet.retweets,"Glen")}'>
+        <i class="retweet icon"></i>{{tweet.retweets.length}} Retweet
       </a>
     </div>
   </div>
