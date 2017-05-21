@@ -13,6 +13,12 @@
     </div>
     <div class="actions">
       <a class="reply">Reply</a>
+      <a class="like" (click)="onFavorite(tweet)">
+        <i class="like icon"></i>{{tweet.favorite.length}}
+      </a>
+      <a class="retweet" (click)="onRetweet(tweet)">
+        <i class="retweet icon"></i>{{tweet.retweets.length}}
+      </a>
     </div>
   </div>
 </div>
